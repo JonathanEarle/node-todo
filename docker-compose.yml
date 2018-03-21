@@ -1,7 +1,7 @@
 version: "3"
 services:
  web:
-  image: jonathanjeearle/node-todo:latest
+  image: quay.io/jonathanearle/node-todo:latest
   deploy:
    replicas: 5
    resources:
@@ -17,8 +17,6 @@ services:
   image: mongo
   volumes:
    - mongodb:/data/db
-  ports:
-   - "27017:27017"
 
 volumes:
  mongodb:
